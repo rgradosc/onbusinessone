@@ -1,0 +1,20 @@
+@startuml consoleApp_architecture
+skin rose
+
+package OnBusinessOne.Domain
+package OnBusinessOne.Service
+package OnBusinessOne.DataAccess
+package OnBusinessOne.Controllers
+package OnBusinessOne.ConsoleApp
+package ServiceLayer #ffffff
+
+OnBusinessOne.ConsoleApp .down.> OnBusinessOne.Controllers
+OnBusinessOne.Controllers .down.> OnBusinessOne.DataAccess
+OnBusinessOne.Controllers .down.> OnBusinessOne.Service
+OnBusinessOne.Controllers .down.> OnBusinessOne.Domain
+OnBusinessOne.DataAccess .down.> OnBusinessOne.Domain
+OnBusinessOne.DataAccess .down.> OnBusinessOne.Service
+OnBusinessOne.Service .down.> OnBusinessOne.Domain
+OnBusinessOne.Service .down.> ServiceLayer
+
+@enduml

@@ -1,0 +1,15 @@
+@startuml windowsApp_architecture
+skin rose
+
+package OnBusinessOne.Domain
+package OnBusinessOne.DataAccess
+package OnBusinessOne.WindowsApp
+package SAPbobsCOM  #ffffff
+
+OnBusinessOne.WindowsApp .down.> OnBusinessOne.DataAccess
+OnBusinessOne.WindowsApp .down.> OnBusinessOne.Domain
+OnBusinessOne.WindowsApp .down.> SAPbobsCOM
+OnBusinessOne.DataAccess .down.> OnBusinessOne.Domain
+OnBusinessOne.DataAccess .down.> SAPbobsCOM
+
+@enduml
